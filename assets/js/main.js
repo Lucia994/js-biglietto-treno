@@ -19,16 +19,15 @@ Tools
 
 //Steps
 // Step -1 Richiesta Utente numero di kilometri che intende percorre
-
 const userChoice = prompt ("Quanti kilometri vorresti percorrere?")
 
 // Step 2- Richiedere età utente
-const userAge = prompt("Quanti anni hai?");
+const userAge = Number(prompt("Quanti anni hai?"));
 
-/* Step 3- Calcolare prezzo tot del viaggio
-    -il prezzo del biglietto è definito in base ai km (0.21 € al km)
-    -sconto del 20% per i minorenni
-    -sconto del 40% per gli over 65
-    
-    
-    */
+//Step 3- Calcolare prezzo tot del viaggio
+   // -il prezzo del biglietto è definito in base ai km (0.21 € al km)
+const costForKm = 0.21;
+let totalPriceTicket = costForKm * 0.21; 
+  //sconto del 20% per i minorenni
+if
+ //sconto del 40% per gli over 65
