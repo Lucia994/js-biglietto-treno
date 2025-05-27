@@ -14,20 +14,35 @@ Tools
     -Prompt
     -Conditional Statements: if, else, 
 
-*/ 
+*/
 
 
 //Steps
 // Step -1 Richiesta Utente numero di kilometri che intende percorre
-const userChoice = Number(prompt ("Quanti kilometri vorresti percorrere?"));
+const userChoice = Number(prompt("Quanti kilometri vorresti percorrere?")); // 10
+console.log(userChoice);
 
 // Step 2- Richiedere età utente
-const userAge = Number(prompt("Quanti anni hai?"));
+const userAge = Number(prompt("Quanti anni hai?")); // 31
+console.log(userAge);
 
 //Step 3- Calcolare prezzo tot del viaggio
-   // -il prezzo del biglietto è definito in base ai km (0.21 € al km)
+// -il prezzo del biglietto è definito in base ai km (0.21 € al km)
 const costForKm = 0.21;
-let totalPriceTicket = costForKm * 0.21; 
-  //sconto del 20% per i minorenni
-if
- //sconto del 40% per gli over 65
+
+let totalPriceTicket = userChoice * costForKm; // 10*0.21= 2,1
+console.log(totalPriceTicket);
+
+
+//sconto del 20% per i minorenni (userAge < 18)
+if (userAge < 18) {
+    totalPriceTicket = totalPriceTicket - (totalPriceTicket * 0.2);
+    console.log("discount_minors: "+ "€" + totalPriceTicket.toFixed(2));
+}
+//sconto del 40% per gli over 65 (userAge >= 65)
+else if (userAge >= 65) {
+    totalPriceTicket = totalPriceTicket - (totalPriceTicket * 0.4); //es. prezzo corretto: €16.80
+    console.log("discount_senior: "+ "€" + totalPriceTicket.toFixed(2));
+} else { 
+    console.log("full_price: " + totalPriceTicket + "€");
+}
