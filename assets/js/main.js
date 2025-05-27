@@ -19,7 +19,7 @@ Tools
 
 //Steps
 // Step -1 Richiesta Utente numero di kilometri che intende percorre
-const userChoice = prompt ("Quanti kilometri vorresti percorrere?")
+const userChoice = Number(prompt ("Quanti kilometri vorresti percorrere?"));
 
 // Step 2- Richiedere età utente
 const userAge = Number(prompt("Quanti anni hai?"));
